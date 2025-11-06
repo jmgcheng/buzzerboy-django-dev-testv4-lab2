@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-xl-12">
+    <div class="card d-block">
+      <div class="card-header">
+        <h5 class="card-title mb-0">Company Details</h5>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Name: {{ company.name }}</h5>
+        <p class="card-text text-muted">
+          Created at: {{ company.created_at }} <br>
+          Description: {{ company.description }}
+        </p>
+
+        <!-- Button group -->
+        <div class="d-flex flex-wrap gap-2">
+          <a href="{% url 'company-update' company.id %}" class="btn btn-primary">
+            Edit
+          </a>
+
+          <!--
+          defer deleting as User.last_active_profile will have null if Company gets deleted where UserProfile.company triggers on_delete=models.CASCADE 
+          <button class="btn btn-danger"
+                  data-toggle="delete-modal"
+                  data-url="{% url 'company-delete' company.pk %}"
+                  data-item="{{ company.title }}">
+            Delete
+          </button> -->
+
+          {% if is_subscribed %}
+            <button class="btn btn-dark" disabled>Subscribed</button>
+          {% else %}
+            <form method="post" action="{% url 'company-subscribe' company.pk %}" class="d-inline">
+              {% csrf_token %}
+              <button class="btn btn-secondary">Subscribe</button>
+            </form>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
