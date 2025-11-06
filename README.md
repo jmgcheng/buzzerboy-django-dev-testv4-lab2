@@ -36,3 +36,9 @@ Use Conda
 conda create -n venv_conda_3.10 python=3.10 -y
 conda activate venv_conda_3.10
 ```
+
+---
+
+## 🧾 Lab 2 Submission
+
+👉 [Click here to view the Lab 2 submission screenshots](https://github.com/jmgcheng/buzzerboy-django-dev-testv4-lab2/blob/main/submission-lab2/lab2.md)
