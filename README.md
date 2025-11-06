@@ -18,7 +18,7 @@ cd buzzerboy-django-dev-testv4-lab2
 python -m venv venv
 venv\Scripts\activate
 python manage.py makemigrations
-# migrate will run seed if database is empty
+# migrate will run seed if database is new
 python manage.py migrate
 ```
 
