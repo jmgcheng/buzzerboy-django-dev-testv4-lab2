@@ -43,3 +43,9 @@ conda activate venv_conda_3.10
 ## 🧾 Lab 2 Submission
 
 👉 [Click here to view the Lab 2 submission screenshots](https://github.com/jmgcheng/buzzerboy-django-dev-testv4-lab2/blob/main/submission-lab2/lab2.md)
+
+---
+
+## 🧾 Research 1 Submission
+
+👉 [Click here to view the Research 1 submission](https://github.com/jmgcheng/buzzerboy-django-dev-testv4-lab2/tree/main/submission-research1)
