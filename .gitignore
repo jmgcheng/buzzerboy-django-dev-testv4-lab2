@@ -52,8 +52,10 @@ coverage.xml
 cover/
 
 # Translations
-*.mo
-*.pot
+# *.mo
+# *.pot
+# Always include translation sources (.po)
+!**/locale/**/django.po
 
 # Django stuff:
 *.log
