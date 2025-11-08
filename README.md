@@ -38,6 +38,14 @@ python manage.py migrate
 python manage.py runserver
 ```
 
+## Default Seeded User
+
+```
+username=system,
+email=system@helloworld.com,
+password=system123
+```
+
 ## Need to run specific Python environment?
 
 Use Conda
