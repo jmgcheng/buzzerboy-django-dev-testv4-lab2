@@ -15,8 +15,17 @@ cd buzzerboy-django-dev-testv4-lab2
 ## Setup
 
 ```
+# windows
 python -m venv venv
 venv\Scripts\activate
+pip install -r requirements.txt
+python manage.py makemigrations
+# migrate will run seed if database is new
+python manage.py migrate
+
+# linux
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 python manage.py makemigrations
 # migrate will run seed if database is new
