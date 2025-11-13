@@ -1,0 +1,62 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="text-center header-section mb-5">
+            <span class="text-uppercase fw-semibold text-primary">Contact us</span>
+            <h1 class="title-heading fw-semibold text-dark mb-3 mt-2">We're open to talk to </br> good people.</h1>
+            <p class="text-muted fs-14 mb-0">Discover contact options designed to accommodate </br> pratices of all sizes.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-6 col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0 order-2 order-md-1">
+        <form method="post" onsubmit="return validateForm()">
+            {% csrf_token %}
+            {{contact_form|crispy}}
+            <div class="row">
+                <div class="col-12">
+                    <div class="">
+                        <button type="submit" id="submit" name="send" class="btn btn-primary">Send Message</button>
+                    </div>
+                </div><!--end col-->
+            </div><!--end row-->
+        </form>
+    </div>
+
+    <div class="col-lg-5 offset-lg-1  col-md-6 order-1 order-md-2">
+        <div class="ms-lg-4">
+            <div class="d-flex contact-detail align-items-center">
+                <div class="icon">
+                    <i data-feather="mail" class="text-dark"></i>
+                </div>
+                <div class="flex-1 ms-3">
+                    <h6 class="fw-medium fs-16 mb-1">123 King Street, London W60 10250</h6>
+                    <a href="#" class="fw-medium fs-14 text-primary">see more</a>
+                </div>
+            </div>
+            
+            <div class="d-flex contact-detail align-items-center mt-5">
+                <div class="icon">
+                    <i data-feather="phone" class="text-dark"></i>
+                </div>
+                <div class="flex-1 ms-3">
+                    <h6 class="fw-medium fs-16 mb-1">contact@example.com</h6>
+                    <a href="mailto:contact@example.com" class="fw-medium fs-14 text-primary">say hello</a>
+                </div>
+            </div>
+            
+            <div class="d-flex contact-detail align-items-center mt-5">
+                <div class="icon">
+                    <i data-feather="map-pin" class="text-dark"></i>
+                </div>
+                <div class="flex-1 ms-3">
+                    <h6 class="fw-medium fs-16 mb-1">(+01) 52534 468 854</h6>
+                    <a href="tel:+152534-468-854" class="fw-medium fs-14 text-primary">Call now</a>
+                </div>
+            </div>
+        </div>
+    </div><!--end col-->
+</div>

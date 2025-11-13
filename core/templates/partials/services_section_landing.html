@@ -1,0 +1,15 @@
+{% load static %}
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="text-center header-section mb-5">
+            <span class="text-uppercase fw-semibold text-primary">{{section_services.name_text}}</span>
+            <h1 class="title-heading fw-semibold text-dark mb-3 mt-2">{{section_services.header}}</h1>
+            <p class="text-muted fs-14 mb-0">{{section_services.description|safe}}</p>              
+        </div>
+    </div>
+</div>
+<div class="row g-3">
+    {% for service in services %}
+        {% include "partials/services_list.html" with service=service %}
+    {% endfor %}
+</div>

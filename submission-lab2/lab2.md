@@ -80,6 +80,24 @@
 
 ---
 
+## Landing Page
+
+![Landing Page Screenshot](screenshots/landing.png)
+
+---
+
+## Pricing Page
+
+![Pricing Page Screenshot](screenshots/pricing.png)
+
+---
+
+## Templating
+
+![Templating Screenshot](screenshots/pricing-template.png)
+
+---
+
 ---
 
 ---

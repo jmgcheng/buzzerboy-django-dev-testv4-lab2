@@ -1,0 +1,15 @@
+{% for col, items in qas.items %}
+    <div class="col-xl-6">
+        <div class="p-2">
+            {% for item in items %}
+                <div class="mb-3">
+                    <div class="faq-icon-box">
+                        <i data-feather="{{ item.icon }}" class="fea icon-md"></i>
+                    </div>
+                    <h4 class="f-question">{{ item.title }}</h4>
+                    <p class="f-answer mb-4">{{ item.content }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endfor %}

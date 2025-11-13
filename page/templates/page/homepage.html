@@ -1,12 +1,72 @@
-{% extends "base.html" %}
+{% extends "base_landing.html" %}
+{% load i18n %}
 {% load static %}
 
 {% block content %}
+        
+    <!-- start hero section -->
+    <section class="section pb-0 d-flex hero-section h-auto" id="home">
+        <div class="container">
+            {% include "partials/hero_section_landing.html" %}
+        </div><!-- end container -->
+    </section>
+    <!-- end hero section -->
 
-<div class="row">
-    <div class="col-12">
-        col
-    </div>
-</div>
+    <!-- start client section -->
+    <section class="section position-relative bg-white">
+        <div class="container">
+            {% include "partials/client_section_landing.html" %}
+        </div>
+    </section>
+    <!-- end client section -->
+
+    <!-- start services -->
+    <section class="section bg-white service" id="services">
+        <div class="container">
+            {% include "partials/services_section_landing.html" %}
+        </div>
+    </section>
+    <!-- end service -->
+
+    <!-- start feathers -->
+    <section class="section bg-white bg-opacity-50" id="features">
+        <div class="container">
+            {% include "partials/features_section_landing.html" %}
+        </div>
+    </section>
+    <!-- end feathers -->
+
+    <!-- start testimonials -->
+    <section class="section bg-white testimonial" id="testimonials">
+        <div class="container">
+            {% include "partials/testimonials_section_landing.html" %}
+        </div>
+    </section>
+    <!-- end testimonials -->
+
+    <!-- start FAQs -->
+    <section class="section bg-white bg-opacity-50" id="faq">
+        <div class="container">
+            {% include "partials/qas_section_landing.html" %}
+        </div>
+    </section>
+    <!-- end FAQs -->
+
+    <!-- start Pricing -->
+    <section class="section bg-white" id="plans">
+        <div class="container">
+            {% include "partials/pricing_section_landing.html" %}
+        </div>
+    </section>
+    <!-- end Pricing -->
+
+
+    <!-- start Contact -->
+    <section class="section bg-white bg-opacity-50" id="contact">
+        <div class="container">
+            {% include "partials/contact_section_landing.html" %}
+        </div>
+    </section>
+    <!-- end Pricing -->
 
 {% endblock %}

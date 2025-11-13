@@ -1,0 +1,15 @@
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="text-center header-section mb-5">
+            <span class="text-uppercase fw-semibold text-primary">{{section_price.name_text}}</span>
+            <h1 class="title-heading fw-semibold text-dark mb-3 mt-2">{{section_price.header|safe}}</h1>
+            <p class="text-muted fs-14 mb-0">{{section_price.description|safe}}</p>
+        </div>
+    </div>
+</div>
+<!-- Plans -->
+<div class="row justify-content-center my-3">
+    {% for plan in price_plans %}
+        {% include "partials/pricing_card.html" with plan=plan %}
+    {% endfor %}
+</div>

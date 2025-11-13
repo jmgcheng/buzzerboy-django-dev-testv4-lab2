@@ -1,0 +1,18 @@
+{% load static %}
+<div class="row justify-content-center">
+    <div class="col-lg-8 col-sm-10 z-1 position-relative">
+        <div class="text-center mt-lg-5 pt-5">
+            <div class="caption-box text-center mb-50">
+                <h1 class="caption-title my-4 lh-base">{{section_hero.header}}</h1>
+                <p class="subtitle text-muted">{{section_hero.description}}</p>
+                <div class="d-flex gap-2 justify-content-center mt-4">
+                    <a href="{% url 'dashboard' %}" class="btn btn-primary">Dashboard <i class="mdi mdi-arrow-top-right align-middle text-white ms-1"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-dashboard mt-4 text-center rounded-top-3 pb-0">
+            <img src="{% static 'assets/images/landing/dashboard.jpg' %}" class="img-fluid rounded-top-3" alt="img">
+        </div>
+    </div>
+</div><!-- end row -->

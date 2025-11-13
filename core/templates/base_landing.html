@@ -1,0 +1,30 @@
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include "partials/head.html" %}
+    </head>
+    <body>
+        <!-- navbar section -->
+        {% include "partials/menu_landing.html" %}
+
+        {% block content %}
+        {% endblock %}
+
+        <!-- Start Footer Section -->
+        {% include "partials/footer_landing.html" %}
+        <!-- End Footer Section -->
+
+        <!-- Vendor -->
+        {% include "partials/scripts_vendor.html" %}
+        <!-- Gumshoe Js -->
+        {% include "partials/scripts_gumshoe.html" %}
+        <!-- Swiper Js -->
+        {% include "partials/scripts_swiper.html" %}
+        <!-- Landing Init Js-->
+        {% include "partials/scripts_landing.html" %}
+        <!-- App Js-->
+        {% include "partials/scripts_app.html" %}
+    </body>
+</html>

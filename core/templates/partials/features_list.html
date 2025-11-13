@@ -1,0 +1,11 @@
+{% load static %}
+<div class="col-md-6">
+    <div class="d-flex features-key align-items-center p-3 rounded-3 {% if forloop.counter > 2 %}mt-3{% endif %} shadow-sm">
+        <div class="text-center me-3">
+            <i class="mdi mdi-check-circle text-primary fs-22"></i>
+        </div>
+        <div class="flex-1">
+            <h4 class="mb-0 fs-18">{{feature}}</h4>
+        </div>
+    </div>
+</div>

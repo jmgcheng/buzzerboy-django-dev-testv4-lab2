@@ -1,0 +1,16 @@
+{% load static %}
+
+<div class="swiper-slide">
+    <div class="p-3 rounded-3 border border-gray">
+        <p class="mb-3 fs-18 text-dark fst-italic">{{testimonial.content}}</p>
+        <div class="d-flex align-items-center g-4">
+            <div class="me-2">
+                <img src="{% static 'assets/images/users/' %}{{ testimonial.image }}" class="rounded-circle avatar-sm" alt="">
+            </div>
+            <div class="mt-0">
+                <h3 class="fs-16 text-primary mb-1">{{testimonial.name}}</h3>
+                <p class="fs-13 fw-medium mb-0">{{testimonial.from}}</p>
+            </div>
+        </div>
+    </div>
+</div>

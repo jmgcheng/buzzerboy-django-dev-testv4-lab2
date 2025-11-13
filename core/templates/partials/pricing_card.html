@@ -1,0 +1,25 @@
+<div class="pricing-box col-xl-4 col-md-6">
+    <div class="card card-h-full {% if forloop.counter == 2 %}shadow{% else %}shadow-sm{% endif %} rounded-3">
+        <div class="d-flex flex-column inner-box card-body p-4">
+            <div class="plan-header flex-shrink-0">
+                <h5 class="plan-title {% if forloop.counter == 2 %}text-primary{% endif %}">{{plan.title}}</h5>
+                <p class="plan-subtitle">{{plan.description}}</p>
+            </div>
+            <div class="flex-shrink-0 pb-4 mb-1">
+                <h2 class="month mb-0">
+                    <sup class="fw-semibold"><small>{{plan.currency}}</small></sup> 
+                    <span class="fw-semibold fs-28">{{plan.price}}</span>/ 
+                    <span class="fs-14 text-muted">{{plan.per}}</span>
+                </h2>
+            </div>
+            <ul class="flex-grow-1 plan-stats list-unstyled">
+                {% for feature in plan.features %}
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check check-icon text-primary me-2"><polyline points="20 6 9 17 4 12"></polyline></svg>{{feature}}</li>
+                {% endfor %}
+            </ul>
+            <div class="flex-shrink-0 text-center">
+                <a href="#" class="{% if forloop.counter == 2 %}btn btn-primary w-100 rounded-2{% else %}btn btn-outline-primary w-100 rounded-2 fw-medium waves-effect waves-light{% endif %}">Buy Plan</a>
+            </div>
+        </div>
+    </div> <!-- end Pricing_card -->
+</div>
